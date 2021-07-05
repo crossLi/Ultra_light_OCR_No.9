@@ -1,0 +1,1 @@
+/home/python3/python tools/export_model.py -c configs/rec/ch_ppocr_v2.0/rec_chinese_lite_train_v2.0_lmdb.yml  -o Global.pretrained_model=./output/rec_chinese_lite_v2.0_transformer_all/latest  Global.save_inference_dir=./inference/rec_inference/
