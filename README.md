@@ -3,7 +3,8 @@
 ## 项目描述
 模型总大小9.6M A榜精度79.96%，B榜精度79.43%  
 模型结构：mobilenet + BiLSTM + transformer*2 + linear*2  
-模型:训练模型提取码：
+模型:[百度网盘](https://pan.baidu.com/s/1QulS3av8WXWv4k8XN7xTHw)    
+密码: 0i8f
 
 ## 项目结构
 
