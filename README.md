@@ -41,7 +41,4 @@
        然后用step3进行pretrain，训练500个epoch,得到最后的模型转化为预测模型
     
 ## 使用方式
-A：在AI Studio上[运行本项目](https://aistudio.baidu.com/aistudio/usercenter)
-B：此处由项目作者进行撰写使用方式。
-
-最终的提交代码训练步骤：
+   在AI Studio上[运行本项目](https://aistudio.baidu.com/aistudio/projectdetail/1945242)
