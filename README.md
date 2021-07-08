@@ -23,11 +23,21 @@
    ```
    sh predict.sh
    ```
-  ### 训练步骤
+  ### 训练策略
     1、数据准备  
-       将训练集随机分为90%的训练集和10%的验证集；
-       使用
-    2、
+       将训练集随机分为90%的训练集和10%的验证集； 
+       将训练与验证数据转换为lmdb格式；  
+    2、训练步骤 step1  
+       使用resnet18 + 12层transformer + adadelta固定学习率0.001 + DataAug 进行训练3000个epoch
+    3、训练步骤 step2 
+       使用step1 pretrain训练模型
+       将12层transformer减少至两层，其余参数不变，继续训练，大概训练1000个epoch
+    4、训练步骤 step3  
+       使用step2 pretrain训练模型
+       将resnet18换成mobilenetV3，其余参数不变，训练500个epoch，将adadelta换成adam初始学习率为0.0001，同时去掉dataAug只保留原始的warp进行数据增强，再训练500个epoch
+    5、训练步骤 step4  
+       将全部数据转换为lmdb进行训练
+       然后用step3进行pretrain，训练500个epoch,得到最后的模型转化为预测模型
     
 ## 使用方式
 A：在AI Studio上[运行本项目](https://aistudio.baidu.com/aistudio/usercenter)
